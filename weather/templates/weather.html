@@ -1,0 +1,40 @@
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>weatherapp</title>
+	<style>
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #dddddd;
+}
+</style>
+</head>
+
+<body>
+<div class='row'>
+  <div class='col-xs-4'>
+	<h1> Weather comparison </h1>
+	 <form method="POST" action=" "> {% csrf_token %}
+		{{form|crispy}}
+	  <input type="submit" name= "submit form" value="submit" class="btnbtn-default" />
+	 </form>
+  </div>
+</div>	
+<div>
+	{% block content %}
+	{% endblock %}
+</div>	
+</body>
+</html>
