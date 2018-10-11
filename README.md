@@ -3,4 +3,4 @@ A weather comparison app using Django
 
 
 
-Hi, this is the first commit
+Hi, deleted first commit
